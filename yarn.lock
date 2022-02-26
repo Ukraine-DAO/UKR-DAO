@@ -1478,26 +1478,27 @@
     tslib "^2.0.3"
     typescript "^4.1.3"
 
-"@zoralabs/nft-components@^0.2.4":
-  version "0.2.4"
-  resolved "https://registry.yarnpkg.com/@zoralabs/nft-components/-/nft-components-0.2.4.tgz#04769d58c3ad8f3a3c966d1c3a6a152bb7e045bf"
-  integrity sha512-oKQtriao6YiRkK3Mo0NmfElRoT2BofYpiBUSrmvdA50WfqJ370Vpw+jjViursQJQoY8sdioRjPpDYYWJAPY0UQ==
+"@zoralabs/nft-components@^0.3.2":
+  version "0.3.2"
+  resolved "https://registry.yarnpkg.com/@zoralabs/nft-components/-/nft-components-0.3.2.tgz#add44403b3d9648a4c91da175124521f4832418f"
+  integrity sha512-ycZvJlilkhrPnjPHnbCMTAFvtttZd69fZTSzfgiaYsQQFEvQAu9/DyP1gJ41BExlxHV5U1MubWyWsdp9P7L7hg==
   dependencies:
     "@emotion/css" "^11.1.3"
     "@types/react" "^17.0.5"
-    "@zoralabs/nft-hooks" "^0.7.2"
+    "@zoralabs/nft-hooks" "^0.8.0"
     merge-anything "^4.0.1"
     react "^17.0.2"
     react-dom "^17.0.2"
     swr "^0.5.6"
     tslib "^2.2.0"
 
-"@zoralabs/nft-hooks@^0.7.2", "@zoralabs/nft-hooks@^0.7.3":
-  version "0.7.3"
-  resolved "https://registry.yarnpkg.com/@zoralabs/nft-hooks/-/nft-hooks-0.7.3.tgz#609165213864f1e1a9c65aa3dac0d76622ff8990"
-  integrity sha512-VWWSAoQYateJCop/oVVdHGz5gFnZQLpnuqsoUQSGGytMh5CUIg0tWOziL0Wn1tuQhN4yljwqYVLAzeE8DDerOQ==
+"@zoralabs/nft-hooks@^0.8.0", "@zoralabs/nft-hooks@^0.8.1":
+  version "0.8.1"
+  resolved "https://registry.yarnpkg.com/@zoralabs/nft-hooks/-/nft-hooks-0.8.1.tgz#7f66516c44eac6160b4a5d8bfff47544b0cda345"
+  integrity sha512-Flc4s87KhAnXKxubyELVWfydc8FYu+uiZPl1pvIwvuTTsBPEAUKMTepGkkLivrJFPQ47a++hsUGMHRPnTvhDbA==
   dependencies:
     "@ethersproject/address" "^5.4.0"
+    "@ethersproject/bytes" "^5.5.0"
     big.js "^6.1.0"
     cross-fetch "^3.1.4"
     dataloader "^2.0.0"
@@ -1506,6 +1507,7 @@
     node-abort-controller "^2.0.0"
     react "^17.0.2"
     react-test-renderer "^17.0.2"
+    sha3 "^2.1.4"
     swr "^0.5.6"
     tslib "^2.2.0"
 
@@ -2269,6 +2271,14 @@ buffer@5.6.0:
   dependencies:
     base64-js "^1.0.2"
     ieee754 "^1.1.4"
+
+buffer@6.0.3:
+  version "6.0.3"
+  resolved "https://registry.yarnpkg.com/buffer/-/buffer-6.0.3.tgz#2ace578459cc8fbe2a70aaa8f52ee63b6a74c6c6"
+  integrity sha512-FTiCpNxtwiZZHEZbcbTIcZjERVICn9yq/pDFkTl95/AxzD1naBctN7YO68riM/gLSDY7sdrMby8hofADYuuqOA==
+  dependencies:
+    base64-js "^1.3.1"
+    ieee754 "^1.2.1"
 
 buffer@^4.3.0:
   version "4.9.2"
@@ -4751,7 +4761,7 @@ idna-uts46-hx@^2.3.1:
   dependencies:
     punycode "2.1.0"
 
-ieee754@^1.1.13, ieee754@^1.1.4:
+ieee754@^1.1.13, ieee754@^1.1.4, ieee754@^1.2.1:
   version "1.2.1"
   resolved "https://registry.yarnpkg.com/ieee754/-/ieee754-1.2.1.tgz#8eb7a10a63fff25d15a57b001586d177d1b0d352"
   integrity sha512-dcyqhDvX1C46lXZcVqCpK+FtMRQVdIMN6/Df5js2zouUsqG7I6sFxitIC+7KYK29KdXOLHdu9zL4sFnoVQnqaA==
@@ -7436,6 +7446,13 @@ sha.js@^2.4.0, sha.js@^2.4.8:
   dependencies:
     inherits "^2.0.1"
     safe-buffer "^5.0.1"
+
+sha3@^2.1.4:
+  version "2.1.4"
+  resolved "https://registry.yarnpkg.com/sha3/-/sha3-2.1.4.tgz#000fac0fe7c2feac1f48a25e7a31b52a6492cc8f"
+  integrity sha512-S8cNxbyb0UGUM2VhRD4Poe5N58gJnJsLJ5vC7FYWGUmGhcsj4++WaIOBFVDxlG0W3To6xBuiRh+i0Qp2oNCOtg==
+  dependencies:
+    buffer "6.0.3"
 
 shebang-command@^1.2.0:
   version "1.2.0"

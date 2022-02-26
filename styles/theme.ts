@@ -72,7 +72,10 @@ export const mediaConfigurationStyles = {
       padding: var(--base-unit);
       font-size: var(--text-02);
       border-width: 4px;
-      margin: 0;
+      margin: 10px 0;
+      ${mixins.media.laptop`
+        margin: 0;
+      `}
     `,
     fullPageHistoryItemDatestamp: () => css`
       // padding-top: 5px;
@@ -97,7 +100,7 @@ export const mediaConfigurationStyles = {
         font-size: var(--text-04);
         line-height: 1.2;
         * {
-          margin: 0;
+          // margin: 0;
           text-align: center;
         }
         ${mixins.media.tablet`
@@ -111,7 +114,7 @@ export const mediaConfigurationStyles = {
     `,
     fullPageHistoryItemDescription: () => css`
       display: flex;
-      align-items: center;
+      align-items: flex-start;
     `,
     fullCreatorOwnerSection: () => css`
       display: none;

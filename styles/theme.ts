@@ -8,7 +8,6 @@ export const mediaConfigurationStyles = {
     borderStyle: '1px solid var(--ukraine-yellow)',
     defaultBorderRadius: 0,
     maximumPricingDecimals: 4,
-    preferredIPFSGateway: 'https://db13.mypinata.cloud'
   },
   styles: {
     /* CARDS */
@@ -40,18 +39,12 @@ export const mediaConfigurationStyles = {
       margin: 0;
       position: relative;
       width: 100%;
-      height: 0;
-      padding-bottom: 100%;
-      height: 70vh;
-      border-bottom: 4px solid var(--color-a);
+      height: 100%;
       img {
         object-fit: contain;
         ${mixins.absoluteFullCentered};
+        filter: drop-shadow(2px 4px 6px black);
       }
-      ${mixins.media.laptop`
-        height: 70vh;
-        padding-bottom: 0;
-      `}
     `,
     infoContainer: () => css`
       padding: var(--space-sm);
@@ -85,6 +78,7 @@ export const mediaConfigurationStyles = {
       // padding-top: 5px;
       font-size: var(--text-02)!important;
       padding-bottom: var(--space-sm);
+      text-align: left!important;
     `,
     fullPageHistoryItem: () => css`
       margin: 0;
@@ -119,6 +113,9 @@ export const mediaConfigurationStyles = {
       display: flex;
       align-items: center;
     `,
+    fullCreatorOwnerSection: () => css`
+      display: none;
+    `,
     mediaLoader: () => css`
       font-size: 0;
       width: 150px;
@@ -144,7 +141,7 @@ export const mediaConfigurationStyles = {
         right: 0;
         background-color: var(--color-a);
       }
-    `
+    `,
     /*
     mediaObject: () => css`
       z-index: 1;
@@ -249,7 +246,7 @@ export const mediaConfigurationStyles = {
     `,
     
     `*/
-  },
+  }
 }
 
 export const web3ProviderStyles = {

@@ -5,7 +5,7 @@ import { PageWrapper } from '../styles/components'
 import { AuctionManager } from '@zoralabs/manage-auction-hooks'
 import { Head } from '../components/HeadMeta'
 import { TokenPreview, BidButton } from '../components/manage'
-
+import { media } from '../styles/mixins'
 import { NFTFullPage, FullComponents } from '@zoralabs/nft-components'
 
 export default function Home({
@@ -34,23 +34,35 @@ export default function Home({
               <div css={
               css`
                 position: relative;
-                &:after {
-                  content: '';
-                  background-color: var(--color-b);
-                  height: 100%;
-                  width: 50%;
-                  position: absolute;
-                  top: 0;
-                  right: 0;
-                  z-index: 0;
-                }
+               
               `}>
                 <div css={css`
-                  height: 70vh;
+                  height: 60vh;
                   position: relative;
                   z-index: 10;
+                  &:after {
+                    content: '';
+                    background-color: var(--color-b);
+                    height: 100%;
+                    width: 50%;
+                    position: absolute;
+                    top: 0;
+                    right: 0;
+                    z-index: 0;
+                  }
+                  ${media.laptop`
+                    height: 70vh;
+                  `}
                 `}>
-                  <FullComponents.MediaFull />
+                  <div css={css`
+                    position: relative;
+                    z-index: 100;
+                    padding: var(--space-md);
+                    height: 100%;
+                    width: 100%;
+                  `}>
+                    <FullComponents.MediaFull />
+                  </div>
                 </div>
                 <BidButton />
               </div>
@@ -59,12 +71,25 @@ export default function Home({
                   background-color: var(--color-b);
                   * {
                     font-size: var(--text-03)!important;
-                    color: var(--black);
+                    color: var(--color-a);
                     opacity: 1!important;
+                    ${media.laptop`
+                      font-size: var(--text-04)!important;
+                    `}
+                  }
+                  .zora-fullItemInfo {
+                    padding: var(--space-sm);
+                    border-bottom: 4px solid var(--color-a);
+                    * {
+                      line-height: 1.15;
+                      ${media.laptop`
+                        font-size: var(--text-05)!important;
+                      `}
+                    }
                   }
                 `}
               >
-                {/*<FullComponents.MediaInfo />*/}
+                <FullComponents.MediaInfo />
                 <FullComponents.AuctionInfo />
                 <FullComponents.ProofAuthenticity />
                 <FullComponents.NFTProperties />

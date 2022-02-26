@@ -21,7 +21,7 @@ export default function GlobalStyles() {
           --border-black: 1px solid var(--black);
           --border-light: 1px solid #dbdbdb;
 
-          --ukraine-blue: #0057b7;
+          --ukraine-blue: #0c5eb8;
           --ukraine-yellow: #ffd700;
 
           --color-a: var(--ukraine-blue);
@@ -112,7 +112,6 @@ export default function GlobalStyles() {
 
         header {
           height: var(--header-height);
-          border-bottom: 4px solid var(--color-b);
           top: 0;
           z-index: var(--header-z);
           a {

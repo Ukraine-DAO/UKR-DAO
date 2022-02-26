@@ -2,16 +2,19 @@ import { css } from '@emotion/react';
 import { NavLink } from './utils/NavLink'
 import { ConnectWallet } from './ConnectWallet'
 import { APP_TITLE } from "../utils/env-vars";
+import { media } from '../styles/mixins';
 
 export const Header = () => {
   return (
     <>
       <header>
         <div className='flex-row' css={css`
-          padding-left: var(--space-md);
-          a {
+          padding-left: var(--space-sm);
+          font-size: var(--text-03);
+          ${media.laptop`
+            padding-left: var(--space-md);
             font-size: var(--text-05);
-          }
+          `}
         `}>
           <NavLink passHref href='/'>
             <a>{APP_TITLE}</a>

@@ -9,13 +9,16 @@ export const Header = () => {
       <header>
         <div className='flex-row' css={css`
           padding-left: var(--space-md);
+          a {
+            font-size: var(--text-05);
+          }
         `}>
           <NavLink passHref href='/'>
             <a>{APP_TITLE}</a>
           </NavLink>
-          <NavLink passHref href='/about'>
+          {/*<NavLink passHref href='/about'>
             <a>About</a>
-          </NavLink>
+  </NavLink>*/}
         </div>
         <div css={css`
           height: 100%;

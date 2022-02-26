@@ -34,9 +34,22 @@ export default function Home({
               <div css={
               css`
                 position: relative;
-                background: var(--black);
+                &:after {
+                  content: '';
+                  background-color: var(--color-b);
+                  height: 100%;
+                  width: 50%;
+                  position: absolute;
+                  top: 0;
+                  right: 0;
+                  z-index: 0;
+                }
               `}>
-                <div css={css`height: 70vh;`}>
+                <div css={css`
+                  height: 70vh;
+                  position: relative;
+                  z-index: 10;
+                `}>
                   <FullComponents.MediaFull />
                 </div>
                 <BidButton />

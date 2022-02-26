@@ -8,6 +8,7 @@ export const mediaConfigurationStyles = {
     borderStyle: '1px solid var(--ukraine-yellow)',
     defaultBorderRadius: 0,
     maximumPricingDecimals: 4,
+    preferredIPFSGateway: 'https://db13.mypinata.cloud'
   },
   styles: {
     /* CARDS */
@@ -118,6 +119,32 @@ export const mediaConfigurationStyles = {
       display: flex;
       align-items: center;
     `,
+    mediaLoader: () => css`
+      font-size: 0;
+      width: 150px;
+      height: 150px;
+      ${mixins.absoluteCentered};
+      background-color: var(--color-b);
+      border: 4px solid var(--color-b);
+      &:before {
+        content: '';
+        width: 71px;
+        height: 71px;
+        position: absolute;
+        top: 0;
+        left: 0;
+        background-color: var(--color-a);
+      }
+      &:after {
+        content: '';
+        width: 71px;
+        height: 71px;
+        position: absolute;
+        bottom: 0;
+        right: 0;
+        background-color: var(--color-a);
+      }
+    `
     /*
     mediaObject: () => css`
       z-index: 1;
@@ -227,7 +254,7 @@ export const mediaConfigurationStyles = {
 
 export const web3ProviderStyles = {
   walletOption: `
-    color: #000 !important;
+    color: var(--color-a);
     position: relative;
     width: 100%;
     padding: 20px;

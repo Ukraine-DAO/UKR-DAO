@@ -102,17 +102,17 @@ export default function GlobalStyles() {
             text-decoration: none;
             color: var(--ukraine-blue);
             &.active {
-              text-decoration: underline;
+              // text-decoration: underline;
             }
             ${media.hover`
-              text-decoration: underline;
+              // text-decoration: underline;
             `}
           }
         }
 
         header {
           height: var(--header-height);
-          // position: sticky;
+          border-bottom: 4px solid var(--color-b);
           top: 0;
           z-index: var(--header-z);
           a {
@@ -199,7 +199,9 @@ export default function GlobalStyles() {
           background-color: var(--color-b)!important;
           width: 100%;
           max-width: 500px;
-          filter: drop-shadow(0px 0px 35px rgba(0,0,0,.5))
+          filter: drop-shadow(0px 0px 35px rgba(0,0,0,.25));
+          border-radius: 0!important;
+          border: 4px solid var(--color-a);
         }
 
         .zora-wallet-walletOptionsList {
@@ -216,22 +218,31 @@ export default function GlobalStyles() {
 
         .zora-wallet-walletOption {
           ${smallPillButton};
+          color: var(--color-b)!important;
+          ${media.hover`
+            color: var(--color-a)!important;
+          `}
+        }
+
+        .zora-wallet-modalTitleText {
+          color: var(--color-a)!important;
+          text-transform: uppercase;
         }
 
         .zora-wallet-modalContent {
           padding: var(--space-sm)!important;
           h3 {
-            font-size: var(--text-01) !important;
+            font-size: var(--text-02) !important;
             padding: 0 0 15px;
           }
           .zora--auction-house-modalSuccessMessage {
-            font-size: var(--text-01) !important;
+            font-size: var(--text-02) !important;
           }
           img {
             object-fit: contain;
           }
           p {
-            font-size: var(--text-01);
+            font-size: var(--text-02);
             padding: 0 0 10px;
           }
           .zora--auction-house-ethAmountLabel {
@@ -260,15 +271,15 @@ export default function GlobalStyles() {
         .zora-wallet-modalClose {
           width: 35px;
           height: 35px;
-          background-color: black!important;
-          border-radius: 50px!important;
+          background-color: var(--color-a)!important;
+          border-radius: 0px!important;
           position: relative;
           display: flex;
           justify-content: center;
           align-items: center;
           padding: 0;
           path {
-            fill: var(--green);
+            fill: var(--color-b);
           }
         }
 

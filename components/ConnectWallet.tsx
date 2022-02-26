@@ -15,8 +15,12 @@ export const ConnectWallet = () => {
         font-size: var(--text-03);
         background-color: var(--color-a);
         color: var(--color-b);
+        border-left: 4px solid var(--color-b);
+        border-bottom: 4px solid var(--color-b);
         ${media.hover`
-          background-color: var(--black);
+          background-color: var(--color-b);
+          border-color: var(--color-a);
+          color: var(--color-a);
         `}
       `}
     >

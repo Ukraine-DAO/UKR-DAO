@@ -93,7 +93,7 @@ export const buttonStyle = css`
 
 export const smallPillButton = css`
   ${buttonInit};
-  border: var(--border-green);
+  border: 2px solid var(--color-a);
   font-size: var(--text-01);
   font-family: var(--helvetica);
   width: 100%;
@@ -108,7 +108,6 @@ export const smallPillButton = css`
   ${media.hover`
     color: var(--color-a);
     background-color: var(--color-b);
-    border: 1px solid var(--color-a)!important;
   `}
 `
 

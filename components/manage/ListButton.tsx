@@ -2,6 +2,7 @@ import { useContext, Fragment } from 'react'
 import { NFTDataContext } from '@zoralabs/nft-components'
 import { useManageAuction } from '@zoralabs/manage-auction-hooks'
 import { css } from '@emotion/react'
+import { media } from '../../styles/mixins'
 
 export const ListButton = () => {
   const {
@@ -27,6 +28,18 @@ export const ListButton = () => {
             openManageAuction(parseInt(reserveId, 10))
           }
         }}
+        css={css`
+          background-color: var(--color-b);
+          font-size: var(--text-04);
+          width: 100%;
+          border: 0;
+          border-top: 4px solid var(--color-a);
+          border-bottom: 4px solid var(--color-a);
+          ${media.hover`
+            background-color: var(--color-a);
+            border-top: 4px solid var(--color-b);
+          `}
+        `}
       >
         Manage
       </button>
@@ -39,6 +52,18 @@ export const ListButton = () => {
       onClick={() => {
         openListAuction(data.nft.contract.address, data.nft.tokenId)
       }}
+      css={css`
+        background-color: var(--color-b);
+        font-size: var(--text-04);
+        width: 100%;
+        border: 0;
+        border-top: 4px solid var(--color-a);
+        border-bottom: 4px solid var(--color-b);
+        ${media.hover`
+          background-color: var(--color-a);
+          border-top: 4px solid var(--color-b);
+        `}
+      `}
     >
       List
     </button>

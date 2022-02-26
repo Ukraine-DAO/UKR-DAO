@@ -8,7 +8,6 @@ import { mediaConfigurationStyles, web3ProviderStyles } from '../styles/theme'
 import GlobalStyles from '../styles/GlobalStyles'
 import { NETWORK_ID, RPC_URL } from '../utils/env-vars'
 import { Header } from '../components/Header'
-import { Footer } from '../components/Footer'
 
 export default function CreateMarketplaceApp({
   Component,
@@ -27,11 +26,10 @@ export default function CreateMarketplaceApp({
           style={mediaConfigurationStyles}
         >
           <Header />
-          <NProgress color='#000000' showAfterMs={300} spinner={false} />
+          <NProgress color='#0c5eb8;' showAfterMs={300} spinner={false} />
           <main>
             <Component {...pageProps} />
           </main>
-          {/*<Footer />*/}
         </MediaConfiguration>
       </Web3ConfigProvider>
     </>

@@ -78,11 +78,24 @@ export default function Home({
                     border-bottom: 4px solid var(--color-a);
                     ${media.hover`
                       background-color: var(--color-a);
+                      border-top: 4px solid var(--color-b);
+                      border-bottom: 4px solid var(--color-b);
                     `}
                   `}
                 >
                   DONATE NOW WITH PARTY BID
                 </a>
+                <h1 css={css`
+                  font-size: var(--text-05);
+                  line-height: 1;
+                  color: var(--color-b);
+                  text-transform: uppercase;
+                  padding: var(--space-sm);
+                  max-width: 1240px;
+                  margin: 0 auto;
+                `}>
+                  <span>100% proceeds go to support Ukrainians suffering for the war.</span>
+                </h1>
               </div>
               <div
                 css={css`
@@ -98,11 +111,16 @@ export default function Home({
                   .zora-fullItemInfo {
                     padding: var(--space-sm);
                     border-bottom: 4px solid var(--color-a);
+                    
                     * {
                       line-height: 1.15;
                       ${media.laptop`
                         font-size: var(--text-05)!important;
                       `}
+                    }
+                    h2 {
+                      font-size: var(--text-05)!important;
+                      margin: 0;
                     }
                   }
                 `}

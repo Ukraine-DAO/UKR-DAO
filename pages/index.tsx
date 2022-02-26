@@ -5,7 +5,7 @@ import { PageWrapper } from '../styles/components'
 import { AuctionManager } from '@zoralabs/manage-auction-hooks'
 import { Head } from '../components/HeadMeta'
 import { TokenPreview, BidButton } from '../components/manage'
-import { media } from '../styles/mixins'
+import { media, buttonStyle } from '../styles/mixins'
 import { NFTFullPage, FullComponents } from '@zoralabs/nft-components'
 
 export default function Home({
@@ -64,6 +64,7 @@ export default function Home({
                     <FullComponents.MediaFull />
                   </div>
                 </div>
+                {/*<BidButton />*/}
                 <a
                   className='button'
                   href={process.env.NEXT_PUBLIC_PARTYBID_LINK}
@@ -127,17 +128,42 @@ export default function Home({
               >
                 <FullComponents.MediaInfo />
                 <FullComponents.AuctionInfo />
-                <FullComponents.ProofAuthenticity />
+              <div
+                css={css`
+                  .zora-infoContainer {
+                    border-bottom: 0!important;
+                    padding-bottom: 0;
+                  }
+                `}
+              >
+                  <FullComponents.ProofAuthenticity />
+                  <div css={css`padding: 0 var(--space-sm) var(--space-sm); border-bottom: 4px solid var(--color-a);`}>
+                    <a
+                      href="https://zora.co/collections/0x715132af755D9D3d81eE0AcF11e60692719bc415/1"
+                      target="_blank"
+                      rel="noreferrer"
+                      css={css`
+                        ${buttonStyle};
+                        display: block;
+                        padding: var(--base-unit);
+                        font-size: var(--text-02);
+                        border-width: 4px;
+                      `}
+                    >
+                      View On Zora
+                    </a>
+                  </div>
+                </div>
                 <FullComponents.NFTProperties />
-              <div css={css`
-                .zora-fullLabel {
-                  padding-bottom: var(--space-sm);
-                  border-bottom: 1px dashed var(--color-a);
-                  margin-bottom: var(--space-sm);
-                }
-              `}>
-                <FullComponents.BidHistory />
-              </div>
+                <div css={css`
+                  .zora-fullLabel {
+                    padding-bottom: var(--space-sm);
+                    border-bottom: 1px dashed var(--color-a);
+                    margin-bottom: var(--space-sm);
+                  }
+                `}>
+                  <FullComponents.BidHistory />
+                </div>
               </div>
             </div>
           </AuctionManager>

@@ -6,7 +6,39 @@ import { media } from '../styles/mixins'
 export const ConnectWallet = () => {
   const { buttonAction, actionText, account, active } = useWalletButton()
   return (
-    <button
+    <>
+      <a
+        className='button'
+        href={process.env.NEXT_PUBLIC_PARTYBID_LINK}
+        target="_blank"
+        rel="noreferrer"
+        css={css`
+          height: 100%;
+          border: 0;
+          font-size: var(--text-03);
+          background-color: var(--color-a);
+          color: var(--color-b);
+          border-left: 4px solid var(--color-a);
+          border-bottom: 4px solid var(--color-a);
+          width: 50vw;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          ${media.hover`
+            background-color: var(--color-b);
+            border-color: var(--color-a);
+            color: var(--color-a);
+          `}
+          ${media.laptop`
+            font-size: var(--text-05);
+          `}
+        `}
+      >
+        <span>DONATE</span>
+      </a>
+      {/*
+      
+        <button
       className='button'
       onClick={() => buttonAction()}
       css={css`
@@ -30,5 +62,10 @@ export const ConnectWallet = () => {
     >
       {active ? account?.addressShortened : actionText}
     </button>
+      */}
+    </>
+    
+    
+    
   )
 }

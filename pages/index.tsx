@@ -64,7 +64,26 @@ export default function Home({
                     <FullComponents.MediaFull />
                   </div>
                 </div>
-                <BidButton />
+              <BidButton />
+              <a
+                className='button'
+                href="https://zora.co/collections/0x715132af755D9D3d81eE0AcF11e60692719bc415/1"
+                target="_blank"
+                rel="noreferrer"
+                css={css`
+                  background-color: var(--color-b);
+                  font-size: var(--text-04);
+                  width: 100%;
+                  border: 0;
+                  border-top: 4px solid var(--color-a);
+                  border-bottom: 4px solid var(--color-a);
+                  ${media.hover`
+                    background-color: var(--color-a);
+                  `}
+                `}
+              >
+                View on Zora
+              </a>
               </div>
               <div
                 css={css`

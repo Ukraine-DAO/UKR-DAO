@@ -14,8 +14,9 @@ export const BidButton = () => {
 
   if (
     !data ||
-    !data.pricing.reserve ||
-    data.pricing.reserve.current.likelyHasEnded
+    !data.pricing.reserve
+    || data.pricing.reserve.current.likelyHasEnded
+    || data.pricing.status === 'NO_PRICING'
   ) {
     return <Fragment />
   }

@@ -65,6 +65,37 @@ export default function Home({
                   </div>
                 </div>
                 {/*<BidButton />*/}
+                <h1 css={css`
+                  font-size: var(--text-05);
+                  line-height: 1;
+                  color: var(--color-b);
+                  text-transform: uppercase;
+                  padding: var(--space-sm);
+                  border-top: 4px solid var(--color-b);
+                  width: 100%;
+                `}>
+                  <span css={css`
+                  max-width: 1240px;
+                  margin: 0 auto;
+                `}>
+                  100% proceeds go to support Ukrainians suffering for the war.
+                </span>
+                </h1>
+                <div css={css`
+                  background-color: var(--color-b);
+                  padding: var(--space-md) var(--space-sm) var(--space-sm);
+                  text-align: center;
+                  p {
+                    font-size: var(--text-04);
+                    color: var(--color-a);
+                    max-width: 1000px;
+                    margin: auto;
+                  }
+                `}>
+                  <p>There are two different ways to donate</p>
+                  <p>A. Donations can be made by sending cryptocurrency directly to UkraineDAO.eth</p>
+                  <p>B. Donations can also be made by participating in the 1x1 party bid</p>
+                </div>
                 <a
                   className='button'
                   href={process.env.NEXT_PUBLIC_PARTYBID_LINK}
@@ -86,17 +117,7 @@ export default function Home({
                 >
                   DONATE NOW WITH PARTY BID
                 </a>
-                <h1 css={css`
-                  font-size: var(--text-05);
-                  line-height: 1;
-                  color: var(--color-b);
-                  text-transform: uppercase;
-                  padding: var(--space-sm);
-                  max-width: 1240px;
-                  margin: 0 auto;
-                `}>
-                  <span>100% proceeds go to support Ukrainians suffering for the war.</span>
-                </h1>
+                
               </div>
               <div
                 css={css`

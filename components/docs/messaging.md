@@ -1,14 +1,11 @@
-## There are two different ways to donate 
+## There are two different ways you can donate
 + A. Donations can be made by sending cryptocurrency directly to UkraineDAO.eth 
 + B. Donations can be made by participating in the 1x1 party bid
 
-### Some reasons to choose A: 
-- You would like to make the donation available immediately for disbursement. 
-- You do not have an on chain wallet. (i,e, you would like to send directly from an exchange a la coinbase). 
-- You have other stuff you gotta get back to
+### Reasons to choose A: 
+If you would like to make a donation available immediately for disbursement via UkraineDAO, then this is a good option if you do not have an on chain wallet set up already (i.e. you would like to send directly from an exchange like Coinbase). 
+We understand some of you are new to setting up a crypto wallet and have very busy lives, but would like to donate.
 
-### Some reasons to choose B: 
-- You want to partake in the social aspect 
-- You want to receive LOVE tokens which have no Utility nor Value, but are an awesome flex. 
-- It feels boring to you to just send crypto to a wallet
-- NOTE: you WILL need an on-chain wallet for this option B
+### Reasons to choose B:
+If you want to partake in the social aspect and would like to receive a LOVE token. These tokens have NO utility nor value, but are a beautiful testament and reminder of your contribution to a noble cause. 
+note: You WILL need an on-chain wallet to participate in option B.

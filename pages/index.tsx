@@ -4,9 +4,11 @@ import { TokenProps } from '../services/getEnvToken'
 import { PageWrapper } from '../styles/components'
 import { AuctionManager } from '@zoralabs/manage-auction-hooks'
 import { Head } from '../components/HeadMeta'
-import { TokenPreview, BidButton } from '../components/manage'
+import { TokenPreview } from '../components/manage'
 import { media, buttonStyle } from '../styles/mixins'
 import { NFTFullPage, FullComponents } from '@zoralabs/nft-components'
+import { MarkDown } from '../components/utils'
+import messaging from '../components/docs/messaging.md'
 
 export default function Home({
   id,
@@ -81,21 +83,7 @@ export default function Home({
                   100% proceeds go to support Ukrainians suffering for the war.
                 </span>
                 </h1>
-                <div css={css`
-                  background-color: var(--color-b);
-                  padding: var(--space-md) var(--space-sm) var(--space-sm);
-                  text-align: center;
-                  p {
-                    font-size: var(--text-04);
-                    color: var(--color-a);
-                    max-width: 1000px;
-                    margin: auto;
-                  }
-                `}>
-                  <p>There are two different ways to donate</p>
-                  <p>A. Donations can be made by sending cryptocurrency directly to UkraineDAO.eth</p>
-                  <p>B. Donations can also be made by participating in the 1x1 party bid</p>
-                </div>
+                <MarkDown markdown={messaging}/>
                 <a
                   className='button'
                   href={process.env.NEXT_PUBLIC_PARTYBID_LINK}

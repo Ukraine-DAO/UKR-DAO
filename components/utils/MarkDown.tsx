@@ -15,15 +15,19 @@ export const MarkDown = ({
       css={[
         css`
           width: 100%;
-          h2,
+          color: var(--color-a);
+          background-color: var(--color-b);
+          text-align: left;
           h3,
+          h2,
           h4 {
-            border-bottom: var(--border-light);
             padding-bottom: var(--base-unit);
-            margin-bottom: var(--space-sm);
+            font-size: var(--text-05);
+            text-transform: uppercase;
           }
           p {
-            font-size: var(--text-03);
+            font-size: var(--text-04);
+            line-height: 1.125;
           }
           img {
             width: 100%;
@@ -39,17 +43,14 @@ export const MarkDown = ({
           }
           ol,
           ul {
-            margin-block-start: 10px;
-            margin-block-end: 10px;
-            margin-inline-start: 0px;
-            margin-inline-end: 0px;
-            padding-inline-start: 40px;
+            list-style: none;
+            font-size: var(--text-04);
           }
-          ol {
-            list-style: number;
-          }
-          ul {
-            list-style-type: disc;
+          li {
+            padding-bottom: var(--space-sm);
+            &:last-of-type {
+              padding-bottom: 0;
+            }
           }
           pre {
             font-size: var(--text-01) !important;
@@ -75,7 +76,7 @@ export const MarkDown = ({
         styleOverrides,
       ]}
     >
-      {unified().use(parse).use(remark2react).processSync(markdown).result}
+      <div css={css`width: 100%; margin: auto; padding: var(--space-sm);`}>{unified().use(parse).use(remark2react).processSync(markdown).result}</div>
     </article>
   )
 }

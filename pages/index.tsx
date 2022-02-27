@@ -4,9 +4,11 @@ import { TokenProps } from '../services/getEnvToken'
 import { PageWrapper } from '../styles/components'
 import { AuctionManager } from '@zoralabs/manage-auction-hooks'
 import { Head } from '../components/HeadMeta'
-import { TokenPreview, BidButton } from '../components/manage'
+import { TokenPreview } from '../components/manage'
 import { media, buttonStyle } from '../styles/mixins'
 import { NFTFullPage, FullComponents } from '@zoralabs/nft-components'
+import { MarkDown } from '../components/utils'
+import messaging from '../components/docs/messaging.md'
 
 export default function Home({
   id,
@@ -65,6 +67,23 @@ export default function Home({
                   </div>
                 </div>
                 {/*<BidButton />*/}
+                <h1 css={css`
+                  font-size: var(--text-05);
+                  line-height: 1;
+                  color: var(--color-b);
+                  text-transform: uppercase;
+                  padding: var(--space-sm);
+                  border-top: 4px solid var(--color-b);
+                  width: 100%;
+                `}>
+                  <span css={css`
+                  max-width: 1240px;
+                  margin: 0 auto;
+                `}>
+                  100% proceeds go to support Ukrainians suffering for the war.
+                </span>
+                </h1>
+                <MarkDown markdown={messaging}/>
                 <a
                   className='button'
                   href={process.env.NEXT_PUBLIC_PARTYBID_LINK}
@@ -86,17 +105,7 @@ export default function Home({
                 >
                   DONATE NOW WITH PARTY BID
                 </a>
-                <h1 css={css`
-                  font-size: var(--text-05);
-                  line-height: 1;
-                  color: var(--color-b);
-                  text-transform: uppercase;
-                  padding: var(--space-sm);
-                  max-width: 1240px;
-                  margin: 0 auto;
-                `}>
-                  <span>100% proceeds go to support Ukrainians suffering for the war.</span>
-                </h1>
+                
               </div>
               <div
                 css={css`

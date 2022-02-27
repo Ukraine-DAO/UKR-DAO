@@ -161,7 +161,7 @@ export default function GlobalStyles() {
         ul {
           font-size: var(--text-02);
           padding-bottom: var(--space-sm);
-          line-height: 1.35;
+          line-height: 1.15;
           font-weight: 400;
         }
 

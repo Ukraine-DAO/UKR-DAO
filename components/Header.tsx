@@ -4,34 +4,35 @@ import { ConnectWallet } from './ConnectWallet'
 import { APP_TITLE } from "../utils/env-vars";
 import { media } from '../styles/mixins';
 
-export const Header = () => {
+export function Header() {
   return (
-    <>
-      <header>
-        <div className='flex-row' css={css`
-          padding-left: var(--space-sm);
-          font-size: var(--text-03);
-          ${media.laptop`
-            padding-left: var(--space-md);
-            font-size: var(--text-05);
-          `}
-        `}>
-          <NavLink passHref href='/'>
-            <a>{APP_TITLE}</a>
-          </NavLink>
-          {/*<NavLink passHref href='/about'>
-            <a>About</a>
-  </NavLink>*/}
-        </div>
-        <div css={css`
-          height: 100%;
-        `}>
-          {/*<NavLink passHref href='/manage'>
-            <a>Manage</a>
-  </NavLink>*/}
-          <ConnectWallet />
-        </div>
-      </header>
-    </>
+    <header>
+      <div css={css`
+        padding-left: var(--space-sm);
+        font-size: var(--text-05);
+        height: var(--header-height);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        ${media.laptop`
+          padding-left: var(--space-md);
+          font-size: var(--text-05);
+        `}
+      `}>
+        <NavLink passHref href='/'>
+          <a>{APP_TITLE}</a>
+        </NavLink>
+      </div>
+      <div css={css`
+        width: 100%;
+        height: var(--header-height);
+        border-bottom: 4px solid var(--color-b);
+        ${media.laptop`
+          border-bottom: none;
+        `}
+      `}>
+        <ConnectWallet />
+      </div>
+    </header>
   )
 }

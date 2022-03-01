@@ -24,10 +24,19 @@ export const ConnectWallet = () => {
           display: flex;
           align-items: center;
           justify-content: center;
+          width: 100%;
+          span {
+            border: 4px solid var(--color-b);
+            border-radius: 500px;
+            padding: 5px 40px;
+          }
           ${media.hover`
             background-color: var(--color-b);
             border-color: var(--color-a);
             color: var(--color-a);
+            span {
+              border-color: var(--color-a)!important;
+            }
           `}
           ${media.laptop`
             font-size: var(--text-05);

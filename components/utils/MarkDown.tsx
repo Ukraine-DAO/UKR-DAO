@@ -15,8 +15,8 @@ export const MarkDown = ({
       css={[
         css`
           width: 100%;
-          color: var(--color-a);
-          background-color: var(--color-b);
+          color: var(--color-b);
+          background-color: var(--color-a);
           text-align: left;
           h3,
           h2,

@@ -111,12 +111,16 @@ export default function GlobalStyles() {
         }
 
         header {
-          height: var(--header-height);
           top: 0;
           z-index: var(--header-z);
+          display: grid;
+          grid-template-columns: 1fr;
           a {
             margin-right: 30px;
           }
+          ${media.laptop`
+            grid-template-columns: 1fr 1fr;
+          `}
         }
 
         .flex-row {

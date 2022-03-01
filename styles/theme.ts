@@ -65,6 +65,7 @@ export const mediaConfigurationStyles = {
       margin-bottom: var(--space-sm);
       font-size: var(--text-02);
       border-width: 4px;
+      border-radius: 500px;
     `,
     fullPageHistoryTxnLink: () => css`
       ${mixins.buttonStyle};

@@ -24,7 +24,7 @@ export function BigHref({
         span {
           border: 4px solid var(--color-a);
           border-radius: 500px;
-          padding: 5px 40px;
+          padding: 8px 40px;
         }
         ${media.hover`
           background-color: var(--color-a);

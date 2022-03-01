@@ -42,6 +42,27 @@ export default function Home({
               />
             </div>
             <Landing.AuctionMediaSection />
+            <a
+              className='button party-bid-mobile'
+              href={process.env.NEXT_PUBLIC_PARTYBID_LINK}
+              target="_blank"
+              rel="noreferrer"
+              css={css`
+                background-color: var(--color-b);
+                font-size: var(--text-05);
+                width: 100%;
+                border: 0;
+                border-top: 4px solid var(--color-a);
+                padding: var(--space-md);
+                text-decoration: underline;
+                ${media.hover`
+                  background-color: var(--color-a);
+                  border-top: 4px solid var(--color-b);
+                `}
+              `}
+            >
+              <span>DONATE NOW WITH PARTY BID</span>
+            </a>
             <Landing.BigHref
               link="https://twitter.com/Ukraine_DAO"
               cta="@Ukraine_DAO"
@@ -62,6 +83,9 @@ const ContentWrapper = styled.div`
   ${media.laptop`
     .party-link {
       display: block;
+    }
+    .party-bid-mobile {
+      display: none;
     }
   `}
 `

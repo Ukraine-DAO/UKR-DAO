@@ -67,6 +67,10 @@ export default function Home({
               link="https://twitter.com/Ukraine_DAO"
               cta="@Ukraine_DAO"
             />
+            <Landing.BigHref
+              link="https://join.ukrainedao.love/"
+              cta="Join Discord"
+            />
             <Landing.NftAuctionInfo />
             <MarkDown markdown={messaging} />
           </ContentWrapper>

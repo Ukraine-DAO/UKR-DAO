@@ -9,6 +9,7 @@ import { NFTFullPage, FullComponents } from '@zoralabs/nft-components'
 import { MarkDown } from '../components/utils'
 import postBidMessaging from '../components/docs/postBidMessaging.md'
 import * as Landing from './../components/landing'
+import Link from 'next/link'
 
 
 
@@ -35,6 +36,11 @@ export default function Home({
             <div className="party-link">
               <Landing.DirectDonateCta />
             </div>
+            <Link href="/ukraine-dao" passHref>
+              <a className='big-link border-bottom'>
+                <span>About</span>
+              </a>
+            </Link>
             <a
               className='button party-bid-mobile'
               href="https://etherscan.io/address/0x633b7218644b83d57d90e7299039ebab19698e9c"
@@ -57,9 +63,6 @@ export default function Home({
               <span>DONATE Directly to UkraineDao.eth</span>
             </a>
             <Landing.AuctionMediaSection />
-            {/* 
-            
-            */}
             <Landing.BigHref
               link="https://twitter.com/Ukraine_DAO"
               cta="@Ukraine_DAO"

@@ -9,7 +9,7 @@ export const ConnectWallet = () => {
     <>
       <a
         className='button'
-        href={process.env.NEXT_PUBLIC_PARTYBID_LINK}
+        href={'https://etherscan.io/address/0x633b7218644b83d57d90e7299039ebab19698e9c'}
         target="_blank"
         rel="noreferrer"
         css={css`
@@ -43,7 +43,7 @@ export const ConnectWallet = () => {
           `}
         `}
       >
-        <span>DONATE</span>
+        <span>Donate</span>
       </a>
       {/*
       

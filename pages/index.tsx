@@ -3,21 +3,18 @@ import styled from '@emotion/styled'
 import { getEnvToken } from '../services/getEnvToken'
 import { TokenProps } from '../services/getEnvToken'
 import { PageWrapper } from '../styles/components'
-import { AuctionManager } from '@zoralabs/manage-auction-hooks'
 import { Head } from '../components/HeadMeta'
-import { TokenPreview } from '../components/manage'
-import { media, buttonStyle } from '../styles/mixins'
+import { media } from '../styles/mixins'
 import { NFTFullPage, FullComponents } from '@zoralabs/nft-components'
 import { MarkDown } from '../components/utils'
-import messaging from '../components/docs/messaging.md'
+import postBidMessaging from '../components/docs/postBidMessaging.md'
 import * as Landing from './../components/landing'
+
+
 
 export default function Home({
   id,
   contract,
-  name,
-  description,
-  image,
   initialData,
 }: TokenProps) {
   return (
@@ -36,15 +33,11 @@ export default function Home({
               </div>
             </HeroWrapper>
             <div className="party-link">
-              <Landing.BigHref
-                link={process.env.NEXT_PUBLIC_PARTYBID_LINK as string}
-                cta="DONATE NOW WITH PARTY BID"
-              />
+              <Landing.DirectDonateCta />
             </div>
-            <Landing.AuctionMediaSection />
             <a
               className='button party-bid-mobile'
-              href={process.env.NEXT_PUBLIC_PARTYBID_LINK}
+              href="https://etherscan.io/address/0x633b7218644b83d57d90e7299039ebab19698e9c"
               target="_blank"
               rel="noreferrer"
               css={css`
@@ -61,8 +54,12 @@ export default function Home({
                 `}
               `}
             >
-              <span>DONATE NOW WITH PARTY BID</span>
+              <span>DONATE Directly to UkraineDao.eth</span>
             </a>
+            <Landing.AuctionMediaSection />
+            {/* 
+            
+            */}
             <Landing.BigHref
               link="https://twitter.com/Ukraine_DAO"
               cta="@Ukraine_DAO"
@@ -71,8 +68,12 @@ export default function Home({
               link="https://join.ukrainedao.love/"
               cta="Join Discord"
             />
+            <Landing.BigHref
+              link="https://join.ukrainedao.love/"
+              cta="Party Bid"
+            />
             <Landing.NftAuctionInfo />
-            <MarkDown markdown={messaging} />
+            <MarkDown markdown={postBidMessaging} />
           </ContentWrapper>
         </NFTFullPage>
     </PageWrapper>

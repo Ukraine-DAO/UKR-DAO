@@ -1,0 +1,2 @@
+If you would like to make a donation available immediately for disbursement via UkraineDAO, send cryptocurrency directly to UkraineDAO.eth. If you do not have an on chain wallet set up already (i.e. you would like to send directly from an exchange like Coinbase). 
+We understand some of you are new to setting up a crypto wallet and have very busy lives, but would like to donate.

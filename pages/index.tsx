@@ -85,7 +85,7 @@ const ContentWrapper = styled.div`
   .party-link {
     display: none;
   }
-  ${media.laptop`
+  ${media.desktop`
     .party-link {
       display: block;
     }
@@ -119,7 +119,7 @@ const HeroWrapper = styled.div`
   .party-link {
     display: none;
   }
-  ${media.laptop`
+  ${media.desktop`
     height: 60vh;
     .party-link {
       display: block;

@@ -30,16 +30,16 @@ export const ConnectWallet = () => {
             border-radius: 500px;
             padding: 8px 40px;
           }
-          ${media.hover`
-            background-color: var(--color-b);
-            border-color: var(--color-a);
-            color: var(--color-a);
-            span {
-              border-color: var(--color-a)!important;
-            }
-          `}
           ${media.laptop`
             font-size: var(--text-05);
+            &:hover {
+              background-color: var(--color-b);
+              border-color: var(--color-a);
+              color: var(--color-a);
+              span {
+                border-color: var(--color-a)!important;
+              }
+            }
           `}
         `}
       >

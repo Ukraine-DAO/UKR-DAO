@@ -11,12 +11,26 @@ export default function UkraineDao() {
   return (
     <>
       <PageWrapper css={css`
+        padding: 5px;
         ${media.laptop`
           border-top: 4px solid var(--color-b);
+          padding: var(--space-sm);
         `}
       `}>
         <Head />  
-        <MarkDown markdown={about} />
+        <MarkDown
+          markdown={about}
+          styleOverrides={css`
+            * {
+              font-size: var(--text-03)!important;
+              line-height: 1.3!important;
+              ${media.laptop`
+                font-size: var(--text-04)!important;
+                line-height: 1.125!important;
+              `}
+            }
+          `}
+        />
       </PageWrapper>
       <div css={css`
         display: none;

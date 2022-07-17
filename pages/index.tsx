@@ -1,3 +1,5 @@
+import { useEffect } from 'react'
+
 import { css } from '@emotion/react'
 import styled from '@emotion/styled'
 import { getEnvToken } from '../services/getEnvToken'
@@ -11,74 +13,77 @@ import postBidMessaging from '../components/docs/postBidMessaging.md'
 import * as Landing from './../components/landing'
 import Link from 'next/link'
 
+export default function Home({ id, contract, initialData }: TokenProps) {
+  useEffect(() => {
+    window.location.href =
+      'https://ukraine-dao.notion.site/ukraine-dao/Ukraine-DAO-Home-Page-3a0e63c6190b4796890dec5c72a94872'
+  }, [])
 
-
-export default function Home({
-  id,
-  contract,
-  initialData,
-}: TokenProps) {
   return (
-    <PageWrapper css={css`padding: 0;`}>
+    <PageWrapper
+      css={css`
+        padding: 0;
+      `}
+    >
       <Head />
-        <NFTFullPage
-          useBetaIndexer={true}
-          contract={contract as string}
-          id={id as string}
-          initialData={initialData}
-        >
-          <ContentWrapper>
-            <HeroWrapper>
-              <div className="sizer">
-                <FullComponents.MediaFull />
-              </div>
-            </HeroWrapper>
-            <div className="party-link">
-              <Landing.DirectDonateCta />
+      <NFTFullPage
+        useBetaIndexer={true}
+        contract={contract as string}
+        id={id as string}
+        initialData={initialData}
+      >
+        <ContentWrapper>
+          <HeroWrapper>
+            <div className='sizer'>
+              <FullComponents.MediaFull />
             </div>
-            <Link href="/ukraine-dao" passHref>
-              <a className='big-link border-bottom'>
-                <span>About</span>
-              </a>
-            </Link>
-            <a
-              className='button party-bid-mobile'
-              href="https://etherscan.io/address/0x633b7218644b83d57d90e7299039ebab19698e9c"
-              target="_blank"
-              rel="noreferrer"
-              css={css`
-                background-color: var(--color-b);
-                font-size: var(--text-05);
-                width: 100%;
-                border: 0;
-                border-top: 4px solid var(--color-a);
-                padding: var(--space-md);
-                text-decoration: underline;
-                ${media.hover`
+          </HeroWrapper>
+          <div className='party-link'>
+            <Landing.DirectDonateCta />
+          </div>
+          <Link href='/ukraine-dao' passHref>
+            <a className='big-link border-bottom'>
+              <span>About</span>
+            </a>
+          </Link>
+          <a
+            className='button party-bid-mobile'
+            href='https://etherscan.io/address/0x633b7218644b83d57d90e7299039ebab19698e9c'
+            target='_blank'
+            rel='noreferrer'
+            css={css`
+              background-color: var(--color-b);
+              font-size: var(--text-05);
+              width: 100%;
+              border: 0;
+              border-top: 4px solid var(--color-a);
+              padding: var(--space-md);
+              text-decoration: underline;
+              ${media.hover`
                   background-color: var(--color-a);
                   border-top: 4px solid var(--color-b);
                 `}
-              `}
-            >
-              <span>DONATE Directly to UkraineDao.eth</span>
-            </a>
-            <Landing.AuctionMediaSection />
-            <Landing.BigHref
-              link="https://twitter.com/Ukraine_DAO"
-              cta="@Ukraine_DAO"
-            />
-            <Landing.BigHref
-              link="https://join.ukrainedao.love/"
-              cta="Join Discord"
-            />
-            <Landing.BigHref
-              link="https://join.ukrainedao.love/"
-              cta="Party Bid"
-            />
-            <Landing.NftAuctionInfo />
-            <MarkDown markdown={postBidMessaging} />
-          </ContentWrapper>
-        </NFTFullPage>
+            `}
+          >
+            <span>DONATE Directly to UkraineDao.eth</span>
+          </a>
+          <Landing.AuctionMediaSection />
+          <Landing.BigHref
+            link='https://twitter.com/Ukraine_DAO'
+            cta='@Ukraine_DAO'
+          />
+          <Landing.BigHref
+            link='https://join.ukrainedao.love/'
+            cta='Join Discord'
+          />
+          <Landing.BigHref
+            link='https://join.ukrainedao.love/'
+            cta='Party Bid'
+          />
+          <Landing.NftAuctionInfo />
+          <MarkDown markdown={postBidMessaging} />
+        </ContentWrapper>
+      </NFTFullPage>
     </PageWrapper>
   )
 }

@@ -11,6 +11,11 @@
       "permanent": true
     },
     {
+      "source": "/.well-known/webfinger",
+      "destination": "https://verified-masto.ukrainedao.love/.well-known/webfinger",
+      "permanent": false      
+    },
+    {
       "source": "/((?!sitemap).*)",
       "destination": "https://ukraine-dao.notion.site/ukraine-dao/Ukraine-DAO-Home-Page-3a0e63c6190b4796890dec5c72a94872",
       "permanent": false

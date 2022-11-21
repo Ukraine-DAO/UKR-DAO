@@ -12,7 +12,7 @@
     },
     {
       "source": "/.well-known/webfinger",
-      "destination": "https://verified-masto.ukrainedao.love/.well-known/webfinger",
+      "destination": "https://official.ukrainedao.love/.well-known/webfinger",
       "permanent": false      
     },
     {
